@@ -236,7 +236,7 @@ export default function Presentation() {
           <div className="pg-num">05</div>
         </div>
 
-        {/* SLIDE 6: CONSTRUCTION */}
+        {/* SLIDE 6: CONSTRUCTION — безопасность, материалы, инженерия */}
         <div className={`slide s6${current === 5 ? ' active' : ''}`}>
           <div className="s6-left">
             <div className="tag">EVERNEW &bull; Строительство</div>
@@ -246,9 +246,10 @@ export default function Presentation() {
               <li><i className="fas fa-fire-extinguisher" />Пожарный гидрант на каждом этаже</li>
               <li><i className="fas fa-bell" />Датчики пожарной системы в каждой квартире</li>
               <li><i className="fas fa-wind" />Система вентиляции</li>
-              <li><i className="fas fa-volume-mute" />Отличная шумоизоляция</li>
-              <li><i className="fas fa-temperature-low" />Хорошая теплоизоляция</li>
-              <li><i className="fas fa-arrow-up" />Скоростные лифты</li>
+              <li><i className="fas fa-volume-mute" />Шумо- и теплоизоляция</li>
+              <li><i className="fas fa-arrow-up" />Скоростные лифты KONA</li>
+              <li><i className="fas fa-gem" />Керамогранит из натурального камня</li>
+              <li><i className="fas fa-window-maximize" />Алюминиевые окна, 5-камерные стеклопакеты</li>
             </ul>
             <div className="build-highlight">
               <div className="bh-label">Застройщик</div>
@@ -260,8 +261,8 @@ export default function Presentation() {
               {[
                 ['24', 'Этажа'],
                 ['115', 'Квартир в блоке'],
-                ['500м²', 'Зона для жильцов'],
                 ['5', 'Камер в стеклопакетах'],
+                ['1', 'Подъезд'],
               ].map(([num, label]) => (
                 <div className="stat-box" key={label}>
                   <div className="sb-num">{num}</div>
@@ -273,7 +274,7 @@ export default function Presentation() {
           <div className="pg-num">06</div>
         </div>
 
-        {/* SLIDE 7: ARCHITECTURE + DOCS */}
+        {/* SLIDE 7: ARCHITECTURE — дизайн, планировки, виды + QR/документы */}
         <div className={`slide s7${current === 6 ? ' active' : ''}`}>
           <div className="s7-left">
             <div className="tag">EVERNEW &bull; Архитектура</div>
@@ -283,12 +284,12 @@ export default function Presentation() {
               {[
                 ['fa-building', 'Премиум класс'],
                 ['fa-ruler-combined', 'Продуманные планировки'],
-                ['fa-mountain', 'Панорамные окна'],
+                ['fa-mountain', 'Панорамные окна с видом на горы'],
                 ['fa-sun', 'Терраса'],
-                ['fa-palette', 'Современный дизайн'],
-                ['fa-couch', '500м² для жильцов'],
-                ['fa-volume-mute', 'Отличная шумоизоляция'],
-                ['fa-thermometer-half', 'Теплоизоляция'],
+                ['fa-palette', 'Современный дизайн фасада'],
+                ['fa-couch', '500м² общая зона на 1 этаже'],
+                ['fa-door-open', '5 квартир на площадке'],
+                ['fa-th-large', 'Просторные планировки'],
               ].map(([icon, text]) => (
                 <div className="arch-item" key={text}><i className={`fas ${icon}`} />{text}</div>
               ))}
