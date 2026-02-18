@@ -492,17 +492,24 @@ body {
 .s6-right {
     flex: 1;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding: 60px;
     position: relative;
     z-index: 2;
+}
+
+.s6-building-img {
+    width: 85%;
+    height: 80%;
+    object-fit: cover;
+    border: 1px solid rgba(212,175,55,0.2);
 }
 
 .build-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .build-list li { display: flex; align-items: center; gap: 14px; font-size: 13.5px; font-weight: 300; color: #ccc; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
 .build-list li:last-child { border: none; }
 .build-list li i { color: #D4AF37; font-size: 15px; min-width: 20px; text-align: center; }
+.build-list li strong { color: #D4AF37; font-weight: 500; }
 
 .build-highlight {
     margin-top: 25px;
@@ -514,22 +521,6 @@ body {
 .build-highlight .bh-label { font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
 .build-highlight .bh-text { font-family: 'Playfair Display', serif; font-size: 16px; color: #fff; }
 .build-highlight .bh-text strong { color: #D4AF37; font-weight: 400; }
-
-.s6-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-}
-
-.stat-box {
-    padding: 22px;
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.06);
-    text-align: center;
-}
-
-.stat-box .sb-num { font-family: 'Playfair Display', serif; font-size: 32px; color: #D4AF37; margin-bottom: 6px; }
-.stat-box .sb-label { font-size: 11px; color: #888; font-weight: 300; letter-spacing: 0.05em; }
 
 /* ===== SLIDE 7: ARCHITECTURE + QR/DOCS ===== */
 .s7 { flex-direction: row; }
@@ -912,7 +903,7 @@ body {
     .s5-quote { margin-top: 15px; padding: 14px 16px; }
     .s5-quote p { font-size: 11px; }
 
-    /* SLIDE 6: CONSTRUCTION */
+    /* SLIDE 6: TECHNOLOGIES */
     .s6 { flex-direction: column; }
     .s6-left {
         flex: none;
@@ -920,15 +911,12 @@ body {
         border-right: none;
         border-bottom: 1px solid rgba(212,175,55,0.15);
     }
-    .s6-right { flex: 1; padding: 15px 25px 50px; }
+    .s6-right { flex: 1; padding: 15px; }
+    .s6-building-img { width: 100%; height: auto; max-height: 30vh; }
     .build-list li { font-size: 12px; gap: 10px; padding: 6px 0; }
     .build-list li i { font-size: 13px; min-width: 16px; }
     .build-highlight { margin-top: 15px; padding: 14px 16px; }
     .build-highlight .bh-text { font-size: 14px; }
-    .s6-stats { gap: 10px; }
-    .stat-box { padding: 16px; }
-    .stat-box .sb-num { font-size: 24px; }
-    .stat-box .sb-label { font-size: 10px; }
 
     /* SLIDE 7: ARCHITECTURE */
     .s7 { flex-direction: column; }
