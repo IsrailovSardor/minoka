@@ -378,19 +378,6 @@ export default function Presentation() {
                 </div>
               ))}
             </div>
-            <div className="s8-contact-footer">
-              <div className="s8-cta">
-                <h4>Свяжитесь с нами</h4>
-                <p>для персонального показа</p>
-              </div>
-              <div className="s8-person">
-                <div className="s8-person-icon"><i className="fas fa-phone-alt" /></div>
-                <div>
-                  <h2>Манапова Минaвар</h2>
-                  <p>Ваш персональный менеджер</p>
-                </div>
-              </div>
-            </div>
           </div>
           <div className="pg-num">09</div>
         </div>
