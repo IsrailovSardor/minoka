@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import './presentation.css'
 
-const TOTAL = 8
+const TOTAL = 9
 
 export default function Presentation() {
   const [current, setCurrent] = useState(0)
@@ -169,17 +169,19 @@ export default function Presentation() {
         {/* SLIDE 4: TERRITORY */}
         <div className={`slide s4${current === 3 ? ' active' : ''}`}>
           <div className="s4-left">
-            <div className="tag">EVERNEW &bull; Территория</div>
+            <div className="tag">EVERNEW &bull; 5,2 га на 9 блоков</div>
             <h2 className="stitle">Территория и<br />благоустройство</h2>
             <div className="sdivider" />
             <div className="feat-grid">
               {[
-                ['fa-lock', 'Закрытый двор', 'Приватность и безопасность'],
-                ['fa-leaf', 'Озеленение', 'Зелёные зоны и прогулки'],
+                ['fa-shield-alt', 'Закрытая территория', 'Видеонаблюдение и охрана'],
+                ['fa-leaf', '40% озеленение', 'Зелёные зоны по всей территории'],
+                ['fa-palette', '3 двора', 'Индивидуальный дизайн каждого'],
+                ['fa-futbol', 'Спортивные площадки', 'Футбол и баскетбол'],
+                ['fa-running', 'Беговые дорожки', 'С датчиком пульса'],
                 ['fa-child', 'Детские площадки', 'Безопасная среда для детей'],
-                ['fa-video', 'Видеонаблюдение', 'Контроль доступа 24/7'],
-                ['fa-couch', 'Зоны отдыха', 'Прогулочные пространства'],
-                ['fa-shield-alt', 'Контроль доступа', 'Закрытая территория'],
+                ['fa-glass-martini-alt', 'Лаунж-зоны', 'Мини-бар для резидентов'],
+                ['fa-key', 'Доступ во все дворы', 'Для всех жильцов комплекса'],
               ].map(([icon, title, desc]) => (
                 <div className="feat-box" key={title}>
                   <i className={`fas ${icon}`} />
@@ -190,13 +192,50 @@ export default function Presentation() {
             </div>
           </div>
           <div className="s4-right">
-            <img alt="План квартиры EVERNEW" className="s4-plan-img" src="/plan.jpg" />
+            <img alt="План квартиры EVERNEW" className="s4-plan-img" src="/city.jpg" />
           </div>
           <div className="pg-num">04</div>
         </div>
 
-        {/* SLIDE 5: FAMILY */}
-        <div className={`slide s5${current === 4 ? ' active' : ''}`}>
+        {/* SLIDE 5: BLOCKS */}
+        <div className={`slide s-blocks${current === 4 ? ' active' : ''}`}>
+          <div className="blocks-left">
+            <div className="tag">EVERNEW &bull; Блоки</div>
+            <h2 className="stitle">Структура<br />блока</h2>
+            <div className="sdivider" />
+            <div className="blocks-stats">
+              <div className="block-stat">
+                <div className="bs-num">24</div>
+                <div className="bs-label">Этажа</div>
+              </div>
+              <div className="block-stat">
+                <div className="bs-num">115</div>
+                <div className="bs-label">Квартир в блоке</div>
+              </div>
+              <div className="block-stat">
+                <div className="bs-num">5</div>
+                <div className="bs-label">Квартир на площадке</div>
+              </div>
+              <div className="block-stat">
+                <div className="bs-num">1</div>
+                <div className="bs-label">Подъезд в блоке</div>
+              </div>
+            </div>
+            <ul className="blocks-features">
+              <li><i className="fas fa-mountain" />Панорамный вид на город и горы</li>
+              <li><i className="fas fa-wind" />Вентиляция с очисткой воздуха</li>
+              <li><i className="fas fa-fire-extinguisher" />Пожарные гидранты на каждом этаже</li>
+              <li><i className="fas fa-bell" />Датчики пожарной системы со спец. жидкостью</li>
+            </ul>
+          </div>
+          <div className="blocks-right">
+            <img alt="План квартиры EVERNEW" className="blocks-plan-img" src="/plan.jpg" />
+          </div>
+          <div className="pg-num">05</div>
+        </div>
+
+        {/* SLIDE 6: FAMILY */}
+        <div className={`slide s5${current === 5 ? ' active' : ''}`}>
           <div className="s5-left">
             <div className="tag">EVERNEW &bull; Для семьи</div>
             <h2 className="stitle">Район<br />семейного типа</h2>
@@ -233,11 +272,11 @@ export default function Presentation() {
               ))}
             </div>
           </div>
-          <div className="pg-num">05</div>
+          <div className="pg-num">06</div>
         </div>
 
-        {/* SLIDE 6: CONSTRUCTION — безопасность, материалы, инженерия */}
-        <div className={`slide s6${current === 5 ? ' active' : ''}`}>
+        {/* SLIDE 7: CONSTRUCTION */}
+        <div className={`slide s6${current === 6 ? ' active' : ''}`}>
           <div className="s6-left">
             <div className="tag">EVERNEW &bull; Строительство</div>
             <h2 className="stitle">Качество<br />строительства</h2>
@@ -271,11 +310,11 @@ export default function Presentation() {
               ))}
             </div>
           </div>
-          <div className="pg-num">06</div>
+          <div className="pg-num">07</div>
         </div>
 
-        {/* SLIDE 7: ARCHITECTURE — дизайн, планировки, виды + QR/документы */}
-        <div className={`slide s7${current === 6 ? ' active' : ''}`}>
+        {/* SLIDE 8: ARCHITECTURE + QR/документы */}
+        <div className={`slide s7${current === 7 ? ' active' : ''}`}>
           <div className="s7-left">
             <div className="tag">EVERNEW &bull; Архитектура</div>
             <h2 className="stitle">Архитектура и<br />планировки</h2>
@@ -312,11 +351,11 @@ export default function Presentation() {
               </ul>
             </div>
           </div>
-          <div className="pg-num">07</div>
+          <div className="pg-num">08</div>
         </div>
 
-        {/* SLIDE 8: INVESTMENT + CONTACTS */}
-        <div className={`slide s8${current === 7 ? ' active' : ''}`}>
+        {/* SLIDE 9: INVESTMENT + CONTACTS */}
+        <div className={`slide s8${current === 8 ? ' active' : ''}`}>
           <div className="s8-header">
             <span className="section-tag">ИНВЕСТИЦИИ &bull; EVERNEW</span>
             <h1 className="main-title">Выгодная инвестиция</h1>
@@ -353,7 +392,7 @@ export default function Presentation() {
               </div>
             </div>
           </div>
-          <div className="pg-num">08</div>
+          <div className="pg-num">09</div>
         </div>
       </div>
 
