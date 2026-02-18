@@ -347,7 +347,7 @@ export default function Presentation() {
               <div className="s8-person">
                 <div className="s8-person-icon"><i className="fas fa-phone-alt" /></div>
                 <div>
-                  <h2>Манапова Миновар</h2>
+                  <h2>Манапова Минaвар</h2>
                   <p>Ваш персональный менеджер</p>
                 </div>
               </div>
